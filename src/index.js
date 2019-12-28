@@ -16,6 +16,9 @@ function Board() {
 
   const handleClick = i => {
     const newSquares = [...squares];
+    if (calculateWinner(squares) || squares[i]) {
+      return
+    }
     newSquares[i] = xIsNext ? "X" : "O";
     setSquares(newSquares);
     setXIsNext(!xIsNext)
@@ -33,8 +36,16 @@ function Board() {
     );
   };
 
-  const status = `Next player is ${xIsNext ? "X" : "O"}`;
+  let status = `Next player is ${xIsNext ? "X" : "O"}`;
   
+  const winner = calculateWinner(squares);
+  
+  if(winner) {
+    status = `Winner is: ${winner}`
+  } else {
+    status = `Next player is ${xIsNext ? "X" : "O"}`
+  }
+
   return (
     <div>
       <div className="status">{status}</div>

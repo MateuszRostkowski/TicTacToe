@@ -68,7 +68,7 @@ function Game() {
 
   const moves = history.map((step, move) => {
     const desc = move ? 
-      `Go to ${move}` :
+      `Go to #${move}` :
       `Go to game start`;
     return (
       <li key={move}>
@@ -98,14 +98,13 @@ function Game() {
   return (
     <div className="game">
       <div className="game-board">
+        <div>{status}</div>
         <Board
           squares={history[stepNumber].squares}
           handleClick={handleClick}
         />
       </div>
-      <div className="game-info">
-        <div>{stepNumber}</div>
-        <div>{status}</div>
+      <div className="game-info">        
         <ol>{moves}</ol>
       </div>
     </div>

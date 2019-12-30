@@ -1,7 +1,7 @@
 {
   "name": "awesome-project",
   "version": "0.1.0",
-  "homepage": "https://MateuszRostkowski.github.io/tictactoe",
+  "homepage": "https://mateuszrostkowski.github.io/TicTacToe/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.1.1",

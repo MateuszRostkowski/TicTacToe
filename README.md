@@ -28,7 +28,7 @@ yarn install
 3. 🚀 **Launch Project**
     
 ```bash
-gastby develop
+npm start
 ```
 
 (This project was made with react tutorial)[https://reactjs.org/tutorial/tutorial.html]
